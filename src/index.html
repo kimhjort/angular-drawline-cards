@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card with sub-title</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mat-typography mat-app-background">
+    <card-subtitle-example></card-subtitle-example>
+    <span class="version-info">Current build: 13.2.7</span>
+
+    <script type="text/javascript">
+      window.onload = function () {
+        if (window.jQuery) {
+          // jQuery is loaded
+
+          var line1 = $('#line1');
+          var card1 = $('#card1');
+          var card2 = $('#card2');
+
+          var pos1 = card1.position();
+          var pos2 = card2.position();
+
+          line1
+            .attr('x1', pos1.left)
+            .attr('y1', pos1.top)
+            .attr('x2', pos2.left)
+            .attr('y2', pos2.top);
+        } else {
+          // jQuery is not loaded
+          alert("Doesn't Work");
+        }
+      };
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>
