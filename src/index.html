@@ -25,17 +25,26 @@
           // jQuery is loaded
 
           var line1 = $('#line1');
+          var line2 = $('#line2');
           var card1 = $('#card1');
           var card2 = $('#card2');
+          var card3 = $('#card3');
 
           var pos1 = card1.position();
           var pos2 = card2.position();
+          var pos3 = card3.position();
 
           line1
             .attr('x1', pos1.left)
             .attr('y1', pos1.top)
             .attr('x2', pos2.left)
             .attr('y2', pos2.top);
+
+          line2
+            .attr('x1', pos1.left)
+            .attr('y1', pos1.top)
+            .attr('x2', pos3.left)
+            .attr('y2', pos3.top);
         } else {
           // jQuery is not loaded
           alert("Doesn't Work");
